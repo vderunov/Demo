@@ -24,13 +24,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistrationUserComponent,
     NeedsComponent,
     SearchComponent,
-    FormsModule,
-    ReactiveFormsModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   providers: [MainService],
