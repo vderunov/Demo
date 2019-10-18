@@ -12,6 +12,7 @@ import { NeedsComponent } from './needs/needs.component';
 import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { MaterialModule } from './shared/material/material.module';
     RegistrationUserComponent,
     NeedsComponent,
     SearchComponent,
+    FormsModule,
+    ReactiveFormsModule
   ],
   imports: [
     BrowserModule,
