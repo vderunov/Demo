@@ -25,7 +25,16 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "package.json",
+                "input": "../",
+                "output": "./assets/"
+              },
+              {
+                "glob": "data.json",
+                "input": "./",
+                "output": "./assets/"
+              }
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
