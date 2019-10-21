@@ -11,8 +11,8 @@ import { RegistrationUserComponent } from './registration-user/registration-user
 import { NeedsComponent } from './needs/needs.component';
 import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -23,15 +23,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistrationShelterComponent,
     RegistrationUserComponent,
     NeedsComponent,
-    SearchComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]

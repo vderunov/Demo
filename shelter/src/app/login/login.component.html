@@ -1,1 +1,35 @@
-<p>login works!</p>
+<form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2 class="mat-display-1">Login Form</h2>
+
+  <mat-form-field>
+    <input matInput placeholder="Email" formControlName="email">
+
+    <mat-error *ngIf="form.email.invalid && form.email.touched">
+      Email is missing or invalid
+    </mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" formControlName="password">
+
+    <mat-hint align="end">
+      Must have at least one letter and one number
+    </mat-hint>
+    <mat-error *ngIf="form.password.invalid && form.password.touched">
+      Password is missing or invalid
+    </mat-error>
+
+  </mat-form-field>
+
+
+  <div class="div-buttons">
+    <button type="submit" mat-raised-button [disabled]="loginForm.invalid">
+      Log In
+    </button>
+    <button mat-raised-button (click)="goToRegistrationPage()">
+      Create New Account
+    </button>
+  </div>
+
+</form>

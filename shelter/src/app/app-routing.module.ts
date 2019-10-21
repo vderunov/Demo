@@ -9,13 +9,13 @@ import { NeedsComponent } from './needs/needs.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
-  {path: 'needs', component: NeedsComponent},
-  {path: 'users', component: UsersComponent},
-  {path: 'shelters', component: SheltersComponent},
-  {path: 'search', component: SearchComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'registraction-shelter', component: RegistrationShelterComponent},
-  {path: 'registraction-user', component: RegistrationUserComponent},
+  { path: 'needs', component: NeedsComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'shelters', component: SheltersComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'registraction-shelter', component: RegistrationShelterComponent },
+  { path: 'registraction-user', component: RegistrationUserComponent },
 ];
 
 @NgModule({
