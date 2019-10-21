@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { IUsers} from './users.interface';
+import { IUsers } from './users.interface';
 declare var require: any;
-const   userUrl = require( '../../assets/data.json');
+const userUrl = require('../../assets/data.json');
 
 @Injectable()
 export class UsersService {
@@ -12,15 +12,5 @@ export class UsersService {
 
   getUsers(): Observable<IUsers[]> {
     return of(userUrl);
- }
-
-
+  }
 }
-
-
-
-
-
-
-
-

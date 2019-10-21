@@ -16,11 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
-
     AppComponent,
     SheltersComponent,
     LoginComponent,
@@ -42,9 +41,7 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientJsonpModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [
-    MainService,
- ],
+  providers: [MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

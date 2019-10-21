@@ -14,16 +14,7 @@
     "importHelpers": true,
     "target": "es2015",
     "types": ["node"],
-    "typeRoots": [
-      "./node_modules/type-is"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    
-  },
- 
-  
- 
+    "typeRoots": ["./node_modules/type-is"],
+    "lib": ["es2018", "dom"]
+  }
 }

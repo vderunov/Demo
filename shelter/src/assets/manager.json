@@ -1,59 +1,59 @@
 [
-    {
-        "id": "rep1",
-        "name": "Timon",
-        "surname": "Akuna",
-        "phone": "+380991122334",
-        "email": "email@gmail.com",
-        "photo": "rep1.jpg",
-        "nameChildrenHouse": "Cry Baby",
-        "adress": {
-            "country": "Ukraine",
-            "region": "Dnipropetrovsk Oblast",
-            "city": "Dnipro",
-            "street": "Havanska St",
-            "location": {
-                "latitude": 48.4103165,
-                "longitude": 35.1112442
-            }
-        }
-    },
-    {
-        "id": "rep2",
-        "name": "Pumba",
-        "surname": "Matata",
-        "phone": "+380991122334",
-        "email": "email@gmail.com",
-        "photo": "rep2.jpg",
-        "nameChildrenHouse": "Miserable life",
-        "adress": {
-            "country": "Ukraine",
-            "region": "Dnipropetrovsk Oblast",
-            "city": "Dnipro",
-            "street": "Voiny St",
-            "location": {
-                "latitude": 48.472413,
-                "longitude": 34.727656
-            }
-        }
-    },
-    {
-        "id": "rep3",
-        "name": "Simba",
-        "surname": "Mufasa",
-        "phone": "+380991122334",
-        "email": "email@gmail.com",
-        "photo": "rep3.jpg",
-        "nameChildrenHouse": "Regrets",
-        "adress": {
-            "country": "Ukraine",
-            "region": "Dnipropetrovsk Oblast",
-            "city": "Dnipro",
-            "street": "Mira St",
-            "location": {
-                "latitude": 48.4103165,
-                "longitude": 35.1112442
-            }
-        }
+  {
+    "id": "rep1",
+    "name": "Timon",
+    "surname": "Akuna",
+    "phone": "+380991122334",
+    "email": "email@gmail.com",
+    "photo": "rep1.jpg",
+    "nameChildrenHouse": "Cry Baby",
+    "adress": {
+      "country": "Ukraine",
+      "region": "Dnipropetrovsk Oblast",
+      "city": "Dnipro",
+      "street": "Havanska St",
+      "location": {
+        "latitude": 48.4103165,
+        "longitude": 35.1112442
+      }
     }
+  },
+  {
+    "id": "rep2",
+    "name": "Pumba",
+    "surname": "Matata",
+    "phone": "+380991122334",
+    "email": "email@gmail.com",
+    "photo": "rep2.jpg",
+    "nameChildrenHouse": "Miserable life",
+    "adress": {
+      "country": "Ukraine",
+      "region": "Dnipropetrovsk Oblast",
+      "city": "Dnipro",
+      "street": "Voiny St",
+      "location": {
+        "latitude": 48.472413,
+        "longitude": 34.727656
+      }
+    }
+  },
+  {
+    "id": "rep3",
+    "name": "Simba",
+    "surname": "Mufasa",
+    "phone": "+380991122334",
+    "email": "email@gmail.com",
+    "photo": "rep3.jpg",
+    "nameChildrenHouse": "Regrets",
+    "adress": {
+      "country": "Ukraine",
+      "region": "Dnipropetrovsk Oblast",
+      "city": "Dnipro",
+      "street": "Mira St",
+      "location": {
+        "latitude": 48.4103165,
+        "longitude": 35.1112442
+      }
+    }
+  }
 ]
