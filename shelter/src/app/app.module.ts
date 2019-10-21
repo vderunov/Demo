@@ -14,9 +14,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientJsonpModule } from '@angular/common/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
+
     AppComponent,
     SheltersComponent,
     LoginComponent,
@@ -27,15 +31,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SearchComponent
   ],
   imports: [
+    MatCardModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientJsonpModule,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [MainService],
+  providers: [
+    MainService,
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
