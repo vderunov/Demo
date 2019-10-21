@@ -4,6 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MainService {
+  constructor() {}
 
-  constructor() { }
+  login() {}
+
+  register(user) {
+    console.log('user', user);
+    // add to local storage
+    // return this.router.navigate(['/login']);
+    return user;
+  }
 }

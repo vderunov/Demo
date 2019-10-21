@@ -6,7 +6,7 @@
     "donationItemID": 1,
     "pathToAvatar": "",
     "status": "Sended",
-    "lastDateWhenStatusChanged":"2019-10-15T12:18",
+    "lastDateWhenStatusChanged": "2019-10-15T12:18",
     "itemName": "Тапки",
     "itemDescription": "Тапки 40го размера"
   },
@@ -17,10 +17,11 @@
     "donationItemID": 2,
     "pathToAvatar": "",
     "status": "Sended",
-    "lastDateWhenStatusChanged":"2019-10-14T12:18",
+    "lastDateWhenStatusChanged": "2019-10-14T12:18",
     "itemName": "Игрушки",
     "itemDescription": "Кубики"
-  },{
+  },
+  {
     "city": "Lviv",
     "orphanageId": 3,
     "charityMakerID": 2,
@@ -28,9 +29,8 @@
     "orphanageAvatar": null,
     "pathToAvatar": "",
     "status": "Sended",
-    "lastDateWhenStatusChanged":"2019-10-13T12:18",
+    "lastDateWhenStatusChanged": "2019-10-13T12:18",
     "itemName": "Книги",
     "itemDescription": "Сказки"
   }
 ]
-
