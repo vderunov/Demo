@@ -2,13 +2,14 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { IUsers } from './users.interface';
 import { UsersService } from './users.service';
+import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
   providers: [UsersService],
-  encapsulation: ViewEncapsulation.None
-
+  encapsulation: ViewEncapsulation.None,
+  // imports: [MatCardModule]
 })
 export class UsersComponent implements OnInit {
   Users: IUsers[] = [];

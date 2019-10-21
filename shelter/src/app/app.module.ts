@@ -16,11 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
+
     AppComponent,
     SheltersComponent,
     LoginComponent,
@@ -31,6 +32,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     SearchComponent,
   ],
   imports: [
+    MatCardModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

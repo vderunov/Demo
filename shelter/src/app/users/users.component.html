@@ -1,22 +1,20 @@
-
-<ul>
-  <li *ngFor="let user of Users">
-    <div>
-      <img src="{{user.photo}}" alt="avatar">
-      <!-- <img ng-src="{{user.photo}}" alt="avatar"> -->
-
-      <h4>{{user.name}}</h4>
-      <p>{{user. surname}}</p>
-      <p>{{user.phone}}</p>
-      <p>{{user.email}}</p>
-
-      <span>{{user.adress.country}}
-        {{user.adress.region}}
-        {{user.adress.city}}
-        {{user.adress.street}}</span>
-      <div>
-
-      </div>
-    </div>
-  </li>
-</ul>
+<mat-card *ngFor="let user of Users" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{user.name}} {{user.surname}}</mat-card-title>
+    <mat-card-subtitle>Volontere</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{user.photo}}" alt="avatar">
+  <mat-card-content>
+    <p>{{user.phone}}</p>
+    <p>{{user.email}}</p>
+    <span>{{user.adress.country}}
+      {{user.adress.region}}
+      {{user.adress.city}}
+      {{user.adress.street}}</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>More Info</button>
+    <button mat-button>call</button>
+  </mat-card-actions>
+</mat-card>
