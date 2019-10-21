@@ -1,5 +1,9 @@
 <mat-tab-group>
   <mat-tab>
+    <app-search
+      [searchTypes]="['itemName', 'status']"
+      [list]="needs"
+    ></app-search>
     <ng-template mat-tab-label>
       <h1>{{ title1 }}</h1>
     </ng-template>
