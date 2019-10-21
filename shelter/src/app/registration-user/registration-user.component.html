@@ -1,1 +1,163 @@
-<p>registration-user works!</p>
+<form class="container" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <h2 class="mat-display-1">Create Account</h2>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="First Name"
+      type="text"
+      formControlName="firstName"
+    />
+
+    <mat-error *ngIf="form.firstName.touched && form.firstName.invalid">
+      First Name is missing or invalid
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Last Name"
+      type="text"
+      formControlName="lastName"
+    />
+
+    <mat-error *ngIf="form.lastName.touched && form.lastName.invalid">
+      Last Name is missing or invalid
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Phone Number"
+      type="text"
+      formControlName="userPhone"
+    />
+
+    <mat-error *ngIf="form.userPhone.touched && form.userPhone.invalid">
+      Phone Number is missing or invalid
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Email"
+      type="email"
+      formControlName="userEmail"
+    />
+
+    <mat-error *ngIf="form.userEmail.touched && form.userEmail.invalid">
+      Email is missing or invalid
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Password"
+      type="password"
+      formControlName="password"
+    />
+
+    <mat-hint align="end">
+      Must have at least one letter and one number
+    </mat-hint>
+
+    <mat-error *ngIf="form.password.touched && form.password.invalid">
+      Password is missing or invalid
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Confirm Password"
+      type="password"
+      formControlName="confirmPassword"
+    />
+
+    <mat-hint align="end">
+      Must have at least one letter and one number
+    </mat-hint>
+
+    <mat-error
+      *ngIf="form.confirmPassword.touched && form.confirmPassword.invalid"
+    >
+      Passwords don't match
+    </mat-error>
+  </mat-form-field>
+
+  <div>
+    <mat-checkbox
+      formControlName="isManager"
+      [value]="manager"
+      color="primary"
+      (change)="onCheckChange()"
+      >Register as shelter's manager</mat-checkbox
+    >
+  </div>
+
+  <ng-container *ngIf="isManager">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Shelter Name"
+        type="text"
+        formControlName="shelterName"
+      />
+
+      <mat-error *ngIf="form.shelterName.touched && form.shelterName.invalid">
+        Shelter Name is invalid
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Shelter Address"
+        type="text"
+        formControlName="shelterAddress"
+      />
+
+      <mat-error
+        *ngIf="form.shelterAddress.touched && form.shelterAddress.invalid"
+      >
+        Shelter Address is invalid
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Shelter Phone Number"
+        type="text"
+        formControlName="shelterPhone"
+      />
+
+      <mat-error *ngIf="form.shelterPhone.touched && form.shelterPhone.invalid">
+        Phone Number is invalid
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Shelter Email"
+        type="email"
+        formControlName="shelterEmail"
+      />
+
+      <mat-error *ngIf="form.shelterEmail.touched && form.shelterEmail.invalid">
+        Phone Number is invalid
+      </mat-error>
+    </mat-form-field>
+  </ng-container>
+
+  <div class="div-buttons">
+    <button type="submit" mat-raised-button [disabled]="registerForm.invalid">
+      Create Account
+    </button>
+  </div>
+</form>

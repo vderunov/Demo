@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Need } from './need';
+import { Needs } from './mock-needs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-needs',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./needs.component.scss']
 })
 export class NeedsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
+  title1 = 'List of needs';
+  title2 = 'List of quests';
 
+  needs = Needs;
 }
+
+// export class NeedsComponent implements OnInit {
+
+//   need: Need;
+
+//   constructor(private http: HttpClient){}
+
+//   ngOnInit(){
+//     this.http.get('needs.json').subscribe((data:Need) => this.need=data);
+//   }
+// }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SearchService } from './search.service';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+  @Input() searchTypes: Array<String>;
+  @Input() list: Array<Object>;
 
-  constructor() { }
+  public searchValue: String;
 
-  ngOnInit() {
+  constructor(private searchService: SearchService) {}
+
+  ngOnInit() {}
+
+  public search(): void {
+    this.getFilteredDataBySearch();
   }
 
+  public getFilteredDataBySearch() {
+    this.searchService.getFilteredDataBySearch(
+      this.list,
+      this.searchValue,
+      this.searchTypes
+    );
+  }
 }

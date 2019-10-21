@@ -1,0 +1,41 @@
+[
+  {
+    "id": "he1",
+    "name": "Zazu",
+    "surname": "Bird",
+    "phone": "+380991122334",
+    "email": "email@gmail.com",
+    "photo": "he1.jpg",
+    "adress": {
+      "country": "Ukraine",
+      "region": "Dnipropetrovsk Oblast",
+      "city": "Dnipro"
+    }
+  },
+  {
+    "id": "he2",
+    "name": "Rafiki",
+    "surname": "Monkey",
+    "phone": "+380991122334",
+    "email": "email@gmail.com",
+    "photo": "he2.jpg",
+    "adress": {
+      "country": "Ukraine",
+      "region": "Dnipropetrovsk Oblast",
+      "city": "Dnipro"
+    }
+  },
+  {
+    "id": "he3",
+    "name": "Nala",
+    "surname": "Lion",
+    "phone": "+380991122334",
+    "email": "email@gmail.com",
+    "photo": "he3.png",
+    "adress": {
+      "country": "Ukraine",
+      "region": "Dnipropetrovsk Oblast",
+      "city": "Dnipro"
+    }
+  }
+]
