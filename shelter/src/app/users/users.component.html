@@ -1,6 +1,22 @@
-<p>users works!</p>
+
 <ul>
-    <li *ngFor="let users of Users">
-      <h2>{{users.name}}</h2>
-    </li>
-  </ul>
+  <li *ngFor="let user of Users">
+    <div>
+      <img src="{{user.photo}}" alt="avatar">
+      <!-- <img ng-src="{{user.photo}}" alt="avatar"> -->
+
+      <h4>{{user.name}}</h4>
+      <p>{{user. surname}}</p>
+      <p>{{user.phone}}</p>
+      <p>{{user.email}}</p>
+
+      <span>{{user.adress.country}}
+        {{user.adress.region}}
+        {{user.adress.city}}
+        {{user.adress.street}}</span>
+      <div>
+
+      </div>
+    </div>
+  </li>
+</ul>

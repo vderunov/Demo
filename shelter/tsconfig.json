@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -11,12 +13,17 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "types": ["node"],
     "typeRoots": [
-      "node_modules/@types"
+      "./node_modules/type-is"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
-  }
+    ],
+    
+  },
+ 
+  
+ 
 }

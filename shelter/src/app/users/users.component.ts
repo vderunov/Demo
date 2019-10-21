@@ -1,45 +1,98 @@
-// import { Component, OnInit } from '@angular/core';
+
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import usersData from './helper.json';
-// import { ApiService } from './../api.service';
-import { IUsers } from './users.interface'
-import{UserService} from './users.service'
+import { IUsers } from './users.interface';
+import { UsersService } from './users.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
-  providers: [ 
-    UserService ,
-   ],
-     encapsulation: ViewEncapsulation.None
-  
+  providers: [UsersService],
+  encapsulation: ViewEncapsulation.None
+
 })
 export class UsersComponent implements OnInit {
-  volonters;
-  contacts;
-  Users: any = usersData;
-  
-  constructor(
-    private userService: UserService, 
-) { }
+  Users: IUsers[] = [];
+
+  constructor(private service: UsersService) { }
 
   ngOnInit() {
-     this.getContacts()
-    this.userService.getUsers().subscribe((data)=>{
-      console.log(data);
-      // this.volonters = data['articles'];
-    });
-
+    this.getAllUsers();
   }
 
-  getContacts(): void {
-    console.log("Text");
-    this.userService.getUsers().subscribe(contacts => 
-    {
-      this.contacts = contacts;
-      console.log(this.contacts);
-    }
-    );
+
+  getAllUsers() {
+    this.service.getUsers()
+      .subscribe(data => {
+        for (const d of (data as IUsers[])) {
+          this.Users.push({
+            name: d.name,
+            id: d.id,
+            surname: d.surname,
+            phone: d.phone,
+            email: d.email,
+            photo: d.photo,
+            adress: d.adress,
+            country: d.country,
+            region: d.region,
+            city: d.city,
+          });
+        }
+        console.log(this.Users, 'smart');
+      });
   }
+
 
 }
+
+
+
+
+
+
+
+
+  // Get full response
+
+  // getIUserss() {
+  //   this.api.getIUsers()
+  //   .subscribe(resp => {
+  //     console.log(resp);
+  //     const keys = resp.headers.keys();
+  //     this.headers = keys.map((key: any) =>
+  //       `${key}: ${resp.headers.get(key)}`);
+
+  //     for (const data of resp.body) {
+  //       this.IUsers.push(data);
+  //     }
+  //     console.log(this.IUsers);
+  //   });
+  // }
+
+  // Get specific fields response
+
+  // getIUserss() {
+  //   this.api.getIUsers()
+  //     .subscribe(data => {
+  //       console.log(data);
+  //       for (const d of (data as any)) {
+  //         this.IUsers.push({
+  //           name: d.name,
+  //           price: d.price
+  //         });
+  //       }
+  //       console.log(this.IUsers);
+  //     });
+  // }
+
+
+
+  // getIUsersById(id: any) {
+  //   this.api.getIUsersById(id)
+  //     .subscribe(data => {
+  //       console.log(data);
+  //     });
+  // }
+
+
+
+// }

@@ -1,14 +1,26 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { IUsers} from './users.interface';
+declare var require: any;
+const   userUrl = require( '../../assets/data.json');
 
 @Injectable()
-export class UserService{
+export class UsersService {
+  constructor() {
+    this.getUsers().subscribe();
+  }
 
-    constructor(private httpClient: HttpClient) { }
-       
-  
+  getUsers(): Observable<IUsers[]> {
+    return of(userUrl);
+ }
 
-    public getUsers(){
-        return this.httpClient.get('http://localhost:4200/assets/data.json');
-      }
+
 }
+
+
+
+
+
+
+
+

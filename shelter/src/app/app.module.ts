@@ -13,7 +13,10 @@ import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { HttpClientJsonpModule } from '@angular/common/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 
 @NgModule({
@@ -35,9 +38,12 @@ import {HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     MaterialModule,
     HttpClientModule,
-   
+    HttpClientJsonpModule,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [MainService],
+  providers: [
+    MainService,
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
