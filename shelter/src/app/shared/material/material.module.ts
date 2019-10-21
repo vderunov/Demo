@@ -9,6 +9,7 @@ import {
   MatListModule,
   MatDialogModule
 } from '@angular/material';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   exports: [
@@ -19,7 +20,8 @@ import {
     MatButtonModule,
     MatTabsModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    FontAwesomeModule
   ]
 })
 export class MaterialModule {}
