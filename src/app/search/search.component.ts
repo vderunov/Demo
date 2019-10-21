@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { SearchService } from './search.service';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-search',
@@ -11,6 +13,7 @@ export class SearchComponent implements OnInit {
   @Input() list: Array<Object>;
 
   public searchValue: String;
+  public faSearch = faSearch;
 
   constructor(private searchService: SearchService) {}
 
@@ -20,8 +23,8 @@ export class SearchComponent implements OnInit {
     this.getFilteredDataBySearch();
   }
 
-  public getFilteredDataBySearch() {
-    this.searchService.getFilteredDataBySearch(
+  public getFilteredDataBySearch(): Array<Object> {
+    return this.searchService.getFilteredDataBySearch(
       this.list,
       this.searchValue,
       this.searchTypes

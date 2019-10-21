@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MatCardModule } from '@angular/material/card';
+import { EventEmitterService } from './event-emitter.service';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { MatCardModule } from '@angular/material/card';
     HttpClientJsonpModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [MainService],
+  providers: [MainService, EventEmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

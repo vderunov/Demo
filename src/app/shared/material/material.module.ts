@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -12,6 +13,7 @@ import {
 
 @NgModule({
   exports: [
+    FontAwesomeModule,
     MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,
