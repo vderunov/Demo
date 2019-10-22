@@ -1,5 +1,6 @@
 /*
-* see https://www.fonts-online.ru/font/Kindly-Jasmine for title's font
+* see https://www.fonts-online.ru/font/Kindly-Jasmine for title font
+* license: free for personal project, non-profit and charity use
 */
 header {
   .nav {
@@ -20,7 +21,7 @@ header {
         /*height: 40px;*/
         width: 100%;
 
-        span {
+        span#title {
           margin-left: 5px;
         }
       }
