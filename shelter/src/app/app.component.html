@@ -1,5 +1,9 @@
 <header>
   <nav class="nav">
+    <a mat-button [routerLink]="['/shelters']">
+      <img id="logo" [src]="mainLogoSrc">
+      <span [innerText]="mainTitleText"></span>
+    </a>
     <a mat-button [routerLink]="['/needs']">Needs</a>
     <a mat-button [routerLink]="['/search']">Search</a>
     <a mat-button [routerLink]="['/users']">Users</a>
